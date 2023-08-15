@@ -1,9 +1,16 @@
 import { Injectable } from '@angular/core';
 
+
+
 @Injectable({
   providedIn: 'root'
 })
 export class ServiceGuardService {
+  constructor() {
+    localStorage.setItem("isLoggedIn","false");
+   }
 
-  constructor() { }
+  authenticate() {
+    localStorage.setItem("isLoggedIn", "true");
+  }
 }

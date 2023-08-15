@@ -75,6 +75,11 @@ div {
                 box-shadow: $box-shadow-black-2;
             }
 
+            span {
+                color: red;
+                font-size: $md;
+            }
+
             .btn {
                 display: flex;
                 flex-direction: column;

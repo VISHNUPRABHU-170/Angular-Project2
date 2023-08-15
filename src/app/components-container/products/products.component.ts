@@ -10,6 +10,7 @@ export class ProductsComponent {
   items:Frames[] = [];
   typed:string="";
   search:string="";
+  condition:boolean = true;
   temp:Frames[] = [];
   constructor() {
     this.items.push({name: " MAC Book", link: "https://www.nextstepreborn.co.th/wp-content/uploads/2022/04/cover-Macbook-Pro-13.3-2017.png"});
@@ -29,8 +30,13 @@ export class ProductsComponent {
   update() {
     this.search = this.typed;
     this.items = this.temp;
+    this.condition = true;
     if(this.search !== '') {
       this.items = this.items.filter(item => item.name.toLocaleLowerCase().includes(this.search.toLowerCase()));
+      console.log(this.items.length);
+      if(this.items.length === 0) {
+        this.condition = false;
+      }
     }
   }
 }

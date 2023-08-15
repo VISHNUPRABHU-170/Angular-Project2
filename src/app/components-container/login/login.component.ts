@@ -1,5 +1,6 @@
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { Component } from '@angular/core';
+import {ServiceGuardService} from '../Services/service-guard.service';
 
 @Component({
   selector: 'app-login',
@@ -15,10 +16,34 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
   number:boolean = true;
+  num:string = "";
   otp:boolean = false;
+  arr:string[]=[];
+  a:string ="";
+  b:string ="";
+  c:string ="";
+  d:string ="";
+  condition:boolean = false;
+  conditionNum:boolean = false;
+
+  constructor(private service: ServiceGuardService) {}
 
   show() {
-    this.number = !this.number;
-    this.otp = !this.otp;
+    const len = this.num.length;
+    if(this.num === ''){
+       this.conditionNum = true;
+    }
+    else{
+      this.number = !this.number;
+      this.otp = !this.otp;
+    }
+  }
+  activate() {
+    if(this.a === '' || this.b === '' || this.c === '' || this.d === ''){
+       this.condition = true;
+    }
+    else {
+      this.service.authenticate();
+    }
   }
 }

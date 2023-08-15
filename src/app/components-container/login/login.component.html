@@ -17,8 +17,9 @@
                  </div>
             </div>
             <div>
-                <input type="number" placeholder="Enter your Mobile number" name="number">
+                <input type="number" placeholder="Enter your Mobile number" name="number" [(ngModel)]="num" minlength="10" maxlength="10" required>
             </div>
+            <span *ngIf="conditionNum">Enter Mobile Number to get OTP</span>
             <div>
                 <button type="submit" (click)="show()">Get OTP</button>
             </div>
@@ -40,17 +41,18 @@
             <div>
                 <img src="../../../assets/OTP-icon.png" alt="otp-icon" width="110px" height="100px">
             </div>
-            <div class="text">Verification</div>
+            <div class="text">OTP Verification</div>
             <div class="otp">
-                <input type="text">
-                <input type="text">
-                <input type="text">
-                <input type="text">
+                <input type="text" [(ngModel)]="a" maxlength="1" required>
+                <input type="text" [(ngModel)]="b" maxlength="1" required>
+                <input type="text" [(ngModel)]="c" maxlength="1" required>
+                <input type="text" [(ngModel)]="d" maxlength="1" required>
             </div>
+            <span *ngIf="condition">Enter the OTP to Verify</span>
             <div class="btn">
-                <button type="submit" routerLink="/home">Verify</button>
+                <button type="submit" routerLink="/home" (click)="activate()">Verify</button>
                 <div style="gap: 0.4rem;">
-                    <span>Didn't receieved yet?</span>
+                    <span style="color: black;">Didn't receieved yet?</span>
                     <span style="color: gray; cursor: pointer;">Resend OTP</span>
                 </div>
             </div>
