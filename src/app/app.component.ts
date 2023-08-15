@@ -9,9 +9,16 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'Angular-Project1';
   isAuthenticated:boolean = false;
+  ngOnInit(): void {
+    if(localStorage.getItem("isLoggedIn")) {
+      this.isAuthenticated = true;
+    }
+  }
   constructor(private router: Router) {
-    if(localStorage.getItem("isLoggedIn") === "false") {
+    if(this.isAuthenticated == false) {
+      console.log(localStorage.getItem("isLoggegIn"));
       this.router.navigate(['/login']);
     }
+    
   }
 }
