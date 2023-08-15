@@ -1,0 +1,55 @@
+@import '../../../styles.scss';
+
+.main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // background: rgb(54, 50, 50);
+    // box-shadow: $box-shadow-gray-1;
+    .box {
+        width: 30rem;
+        height: 30rem;
+        border-radius: 20px;
+        background-color: rgb(240, 228, 214);
+        box-shadow: $box-shadow-black-1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        .head {
+            font-size: $xxl;
+            color: black;
+            font-weight: bold;
+            text-shadow: $shadow-1 gray;
+        }
+        input {
+            padding: 10px 0px;
+            padding-left: 10px;
+            font-size: $lg;
+            border-radius: 10px;
+            box-shadow: $box-shadow-black-1;
+            border: none;
+            outline: none;
+        }
+        textarea {
+            font-size: $lg;
+            padding-left: 10px;
+            border-radius: 10px;
+            box-shadow: $box-shadow-black-1;
+            border: none;
+            outline: none;
+        }
+        button {
+            font-size: $lg;
+            padding: 10px 20px;
+            border-radius: 20px;
+            border: 0px;
+            background-color: yellowgreen;
+            color: white;
+            box-shadow: $box-shadow-black-1;
+            cursor: pointer;
+        }
+    }
+
+}

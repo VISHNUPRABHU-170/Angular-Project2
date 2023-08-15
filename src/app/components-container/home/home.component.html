@@ -1,0 +1,18 @@
+<div>
+    <div class="head">
+        Products and Services that makes your life easier
+    </div>
+    <div class="slideshow">
+
+    </div>
+    <div class="frameContainer">
+        <div class="frames" *ngFor="let item of items">
+            <div class="box">
+                <div class="img">
+                    <img [src]="item.link" alt="img">
+                </div>
+                <p>{{item.name}}</p>
+            </div>
+        </div>
+    </div>
+</div>

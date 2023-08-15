@@ -1,0 +1,55 @@
+@import "../../../styles.scss";
+
+div {
+    .head {
+        display: flex;
+        justify-content: center;
+        font-size: $xl;
+        margin-top: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: gray;
+    }
+    .slideshow {
+        background-color: black;
+        margin: 15px 100px;
+        height: 350px;
+    }
+
+    .frameContainer {
+        margin: 30px 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .frames {
+            .box {
+                width: 280px;
+                height: 280px;
+                border: 0px solid black;
+                background-color: white;
+                box-shadow: $box-shadow-gray-1;
+                border-radius: 30px;
+                display: grid;
+                grid-template-rows: 200px 60px;
+                .img {
+                    padding: 20px;
+                    img {
+                        height: 200px;
+                        width: 250px;
+                    }
+                }
+                p {
+                    background-color: rgb(72, 70, 70);
+                    color: white;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: $lg;
+                    width: 280px;
+                    height: 100%;
+                    border-bottom-left-radius: 30px;
+                    border-bottom-right-radius: 30px;
+                }
+            }
+        }
+    }
+}

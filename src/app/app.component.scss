@@ -1,0 +1,75 @@
+@import ".././styles.scss";
+
+header {
+    background-color: white;
+    box-shadow: $shadow-3;
+    display: flex;
+    justify-content: $sp-bt;
+    align-items: center;
+    height: $xxl * 2;
+
+    div {
+        margin-left: $sm;
+        display: flex;
+        div {
+            justify-content: center;
+            margin-left: 2px;
+            margin-top: 2px;
+            display: flex;
+            flex-direction: column;
+            .head {
+                font-weight: bold;
+                font-size: 1.75rem;
+            }
+        }
+    }
+
+    nav {
+        height: 100%;
+        ul {
+            margin: 0px 0px;
+            display: inline;
+            align-items: center;
+            height: 100%;
+            white-space: nowrap;
+            font-size: $lg;
+            display: flex;
+            gap: $xl;
+            list-style-type: none;
+            li {
+                a {
+                    padding: $sm;
+                    text-decoration: none;
+                    color: black;
+
+                    &:hover {
+                        background-color: rgb(76, 74, 74);
+                        color: white;
+                        border-radius: 15px;
+                    }
+                }
+                .active {
+                    background-color: black;
+                    color: white;
+                    border-radius: 15px;
+                }
+            }
+            .login {
+                height: 100%;
+                padding: 0px 20px;
+                display: flex;
+                gap: 2px;
+                align-items: center;
+                background-color: black;
+                a {
+                    padding: 0px 0px;
+                    color: white;
+                    &:hover {
+                        background-color: black;
+                    }
+                }
+            }
+        }
+    }
+}
+

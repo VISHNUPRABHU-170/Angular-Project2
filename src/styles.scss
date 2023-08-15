@@ -1,0 +1,20 @@
+@import './scss-files/variables';
+
+body {
+    margin: 0px;
+    background-color: rgb(240, 228, 214);
+    overflow: hidden;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+  
+  
+  
+  
+  

@@ -1,0 +1,59 @@
+<div *ngIf="number">
+    <div>
+        <div class="box">
+            <div class="head">
+                Join us
+                Get Started
+            </div>
+            <div>
+                <img src="../../../assets/OTP-icon.png" alt="otp-icon" width="70px" height="70px">
+            </div>
+            <div class="sentence">
+                 <div>
+                    We'll send you an OTP verification code to
+                 </div>
+                 <div>
+                    your mobile number
+                 </div>
+            </div>
+            <div>
+                <input type="number" placeholder="Enter your Mobile number" name="number">
+            </div>
+            <div>
+                <button type="submit" (click)="show()">Get OTP</button>
+            </div>
+        </div>
+    </div>
+    <div class="img">
+        <img src="https://wallpapers.com/images/hd/bullet-security-camera-with-digital-interface-suntptp1l1ull8m7.jpg"
+            alt="cam">
+    </div>
+</div>
+
+<div *ngIf="otp" class="popup">
+    <div class="img">
+        <img src="https://wallpapers.com/images/hd/bullet-security-camera-with-digital-interface-suntptp1l1ull8m7.jpg"
+            alt="cam">
+    </div>
+    <div>
+        <div class="box">
+            <div>
+                <img src="../../../assets/OTP-icon.png" alt="otp-icon" width="110px" height="100px">
+            </div>
+            <div class="text">Verification</div>
+            <div class="otp">
+                <input type="text">
+                <input type="text">
+                <input type="text">
+                <input type="text">
+            </div>
+            <div class="btn">
+                <button type="submit" routerLink="/home">Verify</button>
+                <div style="gap: 0.4rem;">
+                    <span>Didn't receieved yet?</span>
+                    <span style="color: gray; cursor: pointer;">Resend OTP</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
