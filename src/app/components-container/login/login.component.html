@@ -48,9 +48,9 @@
                 <input type="text" [(ngModel)]="c" maxlength="1" required>
                 <input type="text" [(ngModel)]="d" maxlength="1" required>
             </div>
-            <span *ngIf="condition">Enter the OTP to Verify</span>
+            <span *ngIf="condition">Enter a Valid OTP to Verify</span>
             <div class="btn">
-                <button type="submit" routerLink="/home" (click)="activate()">Verify</button>
+                <button type="submit" (click)="activate()">Verify</button>
                 <div style="gap: 0.4rem;">
                     <span style="color: black;">Didn't receieved yet?</span>
                     <span style="color: gray; cursor: pointer;">Resend OTP</span>

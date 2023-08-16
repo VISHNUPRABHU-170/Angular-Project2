@@ -3,7 +3,14 @@
         Products and Services that makes your life easier
     </div>
     <div class="slideshow">
-
+        <img [src]="imageArray[index]" alt="image" width="350px" height="350px">
+        <div>
+            <h1>{{imageName[index]}}</h1>
+            <button>Shop Now</button>
+        </div>
+    </div>
+    <div class="head">
+        Most Viewed Products
     </div>
     <div class="frameContainer">
         <div class="frames" *ngFor="let item of items">
@@ -12,6 +19,39 @@
                     <img [src]="item.link" alt="img">
                 </div>
                 <p>{{item.name}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="head">
+        ABOUT US
+    </div>
+    <div class="container2">
+        <div class="container3">
+            <img src="https://static.thenounproject.com/png/4904422-200.png" alt="icon" width="50px" height="50px">
+            <div class="containerHead">
+                <div class="head1">The Nature of Business</div>
+                <div class="subhead">Wholesealer</div>
+            </div>
+        </div>
+        <div  class="container3">
+            <img src="https://static.thenounproject.com/png/1568537-200.png" alt="icon" width="50px" height="50px">
+            <div class="containerHead">
+                <div class="head1">Year of Establishment</div>
+                <div class="subhead">2000</div>
+            </div>
+        </div>
+        <div  class="container3">
+            <img src="https://icons.veryicon.com/png/o/miscellaneous/icondian/icon-income.png" alt="icon" width="50px" height="50px">
+            <div class="containerHead">
+                <div class="head1">Annual turn over</div>
+                <div class="subhead">Rs.50lakhs - 1crore</div>
+            </div>
+        </div>
+        <div  class="container3">
+            <img src="https://thumbs.dreamstime.com/b/government-tax-gst-icon-government-tax-gst-icon-as-eps-file-165707604.jpg" alt="icon" width="50px" height="50px">
+            <div class="containerHead">
+                <div class="head1">GST Number</div>
+                <div class="subhead">330zx67i09mk</div>
             </div>
         </div>
     </div>

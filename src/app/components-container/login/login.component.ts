@@ -1,6 +1,7 @@
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { Component } from '@angular/core';
 import {ServiceGuardService} from '../Services/service-guard.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -26,7 +27,7 @@ export class LoginComponent {
   condition:boolean = false;
   conditionNum:boolean = false;
 
-  constructor(private service: ServiceGuardService) {}
+  constructor(private service: ServiceGuardService, private router: Router) {}
 
   show() {
     const len = this.num.length;
@@ -44,6 +45,7 @@ export class LoginComponent {
     }
     else {
       this.service.authenticate();
+      this.router.navigate(["/home"]);
     }
   }
 }

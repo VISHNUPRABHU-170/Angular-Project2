@@ -7,19 +7,61 @@
     justify-content: center;
     // background: rgb(54, 50, 50);
     // box-shadow: $box-shadow-gray-1;
-    .box {
+    .box1 {
         width: 30rem;
         height: 30rem;
-        border-radius: 20px;
-        background-color: rgb(240, 228, 214);
-        box-shadow: $box-shadow-black-1;
+        background-color: white;
+        box-shadow: 2px -5px 5px -5px gray,
+        2px 5px 5px -5px gray,
+        -5px 2px 5px -5px gray,
+        5px 2px 5px -5px gray;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        .head {
+            font-size: $xxl;
+            width: 100%;
+            justify-content: $fl-st;
+            color: black;
+            margin: 2rem;
+            font-weight: bold;
+            text-shadow: $shadow-1 gray;
+        }
+        .container {
+            margin: 0rem 0rem 0rem 4rem;
+            .container1 {
+                font-size: $lg;
+                font-weight: bold;
+                display: flex;
+                gap: 2px;
+                .subhead {
+                    margin: 0.5rem 0rem 0rem 0.3rem;
+                }
+
+            }
+            .text {
+                margin-left: 3rem;
+            }
+        }
+    }
+    .box2 {
+        width: 30rem;
+        height: 30rem;
+        background: black;
+        box-shadow: 0px -5px 5px -5px gray,
+        0px 5px 5px -5px gray,
+        -5px 0px 5px -5px gray,
+        5px 0px 5px -5px gray;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
         .head {
             font-size: $xxl;
-            color: black;
+            width: 100%;
+            justify-content: $fl-st;
+            margin-left: 4rem;
+            color: white;
             font-weight: bold;
             text-shadow: $shadow-1 gray;
         }
@@ -28,7 +70,7 @@
             padding-left: 10px;
             font-size: $lg;
             border-radius: 10px;
-            box-shadow: $box-shadow-black-1;
+            box-shadow: $box-shadow-white-2;
             border: none;
             outline: none;
         }
@@ -36,7 +78,7 @@
             font-size: $lg;
             padding-left: 10px;
             border-radius: 10px;
-            box-shadow: $box-shadow-black-1;
+            box-shadow: $box-shadow-white-2;
             border: none;
             outline: none;
         }
@@ -45,10 +87,12 @@
             padding: 10px 20px;
             border-radius: 20px;
             border: 0px;
-            background-color: yellowgreen;
-            color: white;
-            box-shadow: $box-shadow-black-1;
+            background-color: white;
+            color: black;
             cursor: pointer;
+            &:hover {
+                box-shadow: $box-shadow-gray-1;
+            }
         }
     }
 
