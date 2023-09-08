@@ -8,11 +8,17 @@
             <div class="frames" *ngFor="let item of items">
                 <div class="box">
                     <div class="img">
-                        <img [src]="item.link" alt="img">
+                        <img [src]="item.link" alt="img" >
                     </div>
                     <p>{{item.name}}</p>
+                    <div class="cart">
+                        <img src="https://i.ibb.co/y6WGCzY/png-transparent-number-computer-icons-plus-miscellaneous-game-plus-removebg-preview.png" class="img1" alt="cart-icon" width="45px" height="45px" (click)="addItems(item.name)">
+                        <span>{{item.value}}</span>
+                        <img src="https://i.ibb.co/vj4GwQB/icon-minus-icon-1320183702426800883-removebg-preview.png" class="img2" alt="cart-icon" width="52px" height="52px" (click)="removeItems(item.name)">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+

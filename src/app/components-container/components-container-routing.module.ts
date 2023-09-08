@@ -9,11 +9,11 @@ import {canActivateGuard} from './Route-Guards/can-activate.guard';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
-  {path: 'home', component: HomeComponent, canActivate: [canActivateGuard]},
+  {path: 'home', component: HomeComponent},
   {path: 'about', component: AboutComponent, canActivate: [canActivateGuard]},
   {path: 'contact', component: ContactComponent, canActivate: [canActivateGuard]},
   {path: 'login', component: LoginComponent},
-  {path: 'product', component: ProductsComponent, canActivate: [canActivateGuard]},
+  {path: 'product', component: ProductsComponent,},
 ];
 
 @NgModule({

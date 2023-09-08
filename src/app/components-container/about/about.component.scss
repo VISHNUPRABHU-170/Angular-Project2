@@ -1,0 +1,45 @@
+@import "../../../styles.scss";
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .header {
+        margin: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        font-size: $xxxl;
+        font-weight: bold;
+        text-shadow: $shadow-1;
+        div {
+            margin: 15px 0px 0px 0px;
+        }
+    }
+    .container1 {
+        margin: 3rem;
+        display: flex;
+        justify-content: center;
+        font-size: $lg;
+        box-shadow: $box-shadow-gray-1;
+        table,
+        th,
+        td {
+            border: 2px solid black;
+            border-collapse: collapse;
+            background-color: white;
+        }
+        table {
+            width: 100%;
+            tr {
+                th {
+                    background-color: bisque;
+                    color: black;
+                }
+                td {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

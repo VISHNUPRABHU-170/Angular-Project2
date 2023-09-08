@@ -48,14 +48,15 @@ div {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        width: 100%;
         .frames {
+            width: 100%;
             .box {
                 width: 280px;
                 height: 280px;
                 border: 0px solid black;
                 background-color: white;
-                box-shadow: $box-shadow-gray-1;
-                border-radius: 30px;
+                box-shadow: 1px 1px 10px 1px black;
                 display: grid;
                 grid-template-rows: 200px 60px;
                 .img {
@@ -74,8 +75,8 @@ div {
                     font-size: $lg;
                     width: 280px;
                     height: 100%;
-                    border-bottom-left-radius: 30px;
-                    border-bottom-right-radius: 30px;
+                    border-bottom-left-radius: 0px;
+                    border-bottom-right-radius: 0px;
                 }
             }
         }
@@ -124,3 +125,21 @@ div {
         }
     }
 }
+
+.box {
+    position: relative;
+    animation-name: slideshow;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+  }
+
+@keyframes slideshow {
+    0% {
+        left: 0%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
